@@ -6,7 +6,8 @@ public class mainMenu {
 
         System.out.println("1. Enter game" +
                 "\n2. Help" +
-                "\n3. Exit");
+                "\n3. Handbook" +
+                "\n4. Exit");
         //Displays the options for main menu.
 
         boolean exit = false;
@@ -32,11 +33,15 @@ public class mainMenu {
                     //Calls the help method.
 
                 case 3:
+                    Handbook();
+                    break;
+
+                case 4:
                     System.out.println("Thanks for playing!");
                     exit = true;
                     System.exit(0);
                     break;
-                    //Exits the programme safely.
+                    //Exits the program safely.
 
                 default:
                     System.out.println("Invalid choice. Please choose a number between 1 & 3.");
@@ -55,5 +60,11 @@ public class mainMenu {
         Help hlp = new Help();
         hlp.runHelp();
     }
-    //when option 2 is chosen the Help  class will be run.
+    //when option 2 is chosen the Help class will be run.
+
+    private void Handbook() {
+        Handbook hdb = new Handbook();
+        hdb.runHandbook();
+    }
+    //When option 3 is chosen the Handbook class with be run.
 }
